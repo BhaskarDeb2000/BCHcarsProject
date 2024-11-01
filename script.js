@@ -113,10 +113,11 @@ searchBtn.addEventListener("click", function () {
     const discountedPrice = car.getDiscountedPrice();
     searchResult.className = "success";
     searchResult.innerHTML =
-      `Car Found: ${car.maker} ${car.model}, owned by ${
-        car.owner
-      }. Price: $${car.price.toFixed(2)}` +
-      (discountedPrice ? `, Discounted Price: $${discountedPrice}` : "");
+      `Car Found: ${car.maker}, <br> 
+Model: ${car.model}, <br>
+owned by ${car.owner}. <br>
+Price: $${car.price.toFixed(2)}, <br>` +
+      (discountedPrice ? ` Discounted Price: $${discountedPrice}` : "");
   } else {
     searchResult.className = "error";
     searchResult.innerHTML = "No car found with that license plate.";
