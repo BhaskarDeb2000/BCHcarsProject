@@ -115,7 +115,7 @@ searchBtn.addEventListener("click", function () {
     searchResult.innerHTML =
       `Car Found: ${car.maker}, <br> 
 Model: ${car.model}, <br>
-owned by ${car.owner}. <br>
+Owned By: ${car.owner}. <br>
 Price: $${car.price.toFixed(2)}, <br>` +
       (discountedPrice ? ` Discounted Price: $${discountedPrice}` : "");
   } else {
