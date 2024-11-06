@@ -9,15 +9,15 @@ class Car {
     this.year = year;
   }
 
-  // Method to calculate discounted price based on car's age
+  // discounted price based on cars age
   getDiscountedPrice() {
     const currentYear = new Date().getFullYear();
     const carAge = currentYear - this.year;
 
     if (carAge > 10) {
-      return (this.price * 0.85).toFixed(2); // 15% discount
+      return (this.price * 0.85).toFixed(2);
     }
-    return null; // No discount
+    return null; 
   }
 }
 
@@ -29,7 +29,7 @@ const searchBtn = document.getElementById("searchBtn");
 const searchResult = document.getElementById("searchResult");
 const formError = document.getElementById("formError");
 
-// Function to add a car to the table
+// add a car to the table
 function addCarToTable(car) {
   const discountedPrice = car.getDiscountedPrice();
   const row = document.createElement("tr");
@@ -61,7 +61,7 @@ function validateForm(license, maker, model, owner, price, color, year) {
   return null;
 }
 
-// Handle form submission
+// form submission
 carForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
